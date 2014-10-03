@@ -1,0 +1,35 @@
+snippet sel
+	SELECT ${1:t.*}
+	  FROM ${2:dual} t
+	 WHERE 1=1
+	   AND ${3:1=1}
+	   AND rownum < ${4:20}
+	;
+
+
+snippet selr
+	SELECT t.rowid, t.*
+	  FROM ${1:dual} t
+	 WHERE 1=1
+	   AND ${2:1=1}
+	   AND rownum < ${3:20}
+	;
+
+
+snippet xplan
+	SELECT *
+	  FROM table(dbms_xplan.display())
+	 WHERE 1=1
+	;
+
+
+snippet xfor
+	EXPLAIN PLAN FOR
+
+
+snippet schema
+	ALTER SESSION SET CURRENT_SCHEMA=${1:DMFR};
+
+snippet nls
+	ALTER SESSION SET NLS_DATE_FORMAT='${1:dd.mm.yyyy hh24:mi:ss}';
+
